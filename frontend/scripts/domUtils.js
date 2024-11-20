@@ -24,17 +24,19 @@ export function appendChildren(parent, children) {
     children.forEach(child => parent.appendChild(child));
 }
 
-// Set up logout functionality, clearing local storage and redirecting
 export function setupLogout() {
     const logoutButton = document.getElementById('logoutButton');
     if (logoutButton) {
         logoutButton.addEventListener('click', () => {
-            localStorage.clear(); // Clear local storage
-            showNotification("It was nice to see you! Come back soon!"); // Show logout notification
+            localStorage.removeItem("JWToken");
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+            showNotification("It was nice to see you! Come back soon!");
             setTimeout(() => {
-                window.location.replace("/"); // Redirect to the login page after 1 second
-            }, 1000); // Adjust time as needed for user to see notification
+                window.location.replace("/");
+            }, 1000);
         });
     }
 }
+
 
