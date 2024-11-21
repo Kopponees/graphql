@@ -31,15 +31,12 @@ export function setupLogout() {
             localStorage.removeItem("JWToken");
             localStorage.removeItem("loggedIn");
             localStorage.removeItem("username");
-
             showNotification("It was nice to see you! Come back soon!");
-
             setTimeout(() => {
-                window.location.href = window.location.href;
+                window.location.replace("https://kopponees.github.io/graphql/");
             }, 1000);
         });
     }
 }
-
 
 
