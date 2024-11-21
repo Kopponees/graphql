@@ -41,5 +41,5 @@ const server = http.createServer((req, res) => {
 
 // Start the server
 server.listen(3000, () => {
-    console.log('Server running at http://graphql.liis.eiland/');
+    console.log('Server running at http://graphqlproject.com/');
 });
