@@ -12,6 +12,7 @@
 
 body {
     background-color: rgb(1, 47, 1); /* Main background color */
+    cursor: url('style/images/cursor.png'), auto; /* Custom cursor */
 
 }
 
