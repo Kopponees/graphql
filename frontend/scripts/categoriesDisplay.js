@@ -1,5 +1,5 @@
 // This file handles the logic for displaying categorized projects and rendering graphs based on user transactions.
-import { categorizeProjects, filterAndSortXpProjects, calculateTotalXp } from "../charts/DataProcessing.js";
+import { categorizeProjects, filterAndSortXpProjects, calculateTotalXp } from "../charts/dataProcessing.js";
 import { renderCategory } from "../charts/CategoryRendering.js";
 import { fetchTransactions } from "../../backend/api.js";
 import { renderBarChart } from "../charts/AuditRendering.js";
