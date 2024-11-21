@@ -12,7 +12,8 @@
 
 body {
     background-color: rgb(1, 47, 1); /* Main background color */
-    /*cursor: url('/frontend/style/images/cursor.png'), auto; /* Custom cursor */
+    cursor: url('frontend/style/images/cursor.png'), auto;
+
 }
 
 /* Login Page Styling */
