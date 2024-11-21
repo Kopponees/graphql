@@ -35,7 +35,7 @@ export function setupLogout() {
             showNotification("It was nice to see you! Come back soon!");
 
             setTimeout(() => {
-                window.location.reload();
+                window.location.href = window.location.href;
             }, 1000);
         });
     }
