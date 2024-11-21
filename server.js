@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     });
 });
 
-// Start the server on port 3000
+// Start the server
 server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000/');
+    console.log('Server running at http://graphql.liis.eiland/');
 });
