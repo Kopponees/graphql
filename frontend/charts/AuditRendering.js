@@ -18,18 +18,20 @@ async function extractAuditData(transactions) {
         }));
 }
 
-// Renders a bar chart for audit-related data (Received Audits and XP points).
-function renderAuditBars(data) {
+export function renderAuditBars(data) {
     const svg = d3.select("#barChartSvg");
     svg.selectAll("*").remove();
 
+    const width = window.innerWidth > 768 ? window.innerWidth * 0.5 : window.innerWidth * 0.9;
+    const height = 400;
+
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.xp)])
-        .range([0, innerWidth]);
+        .range([0, width - margin.left - margin.right]);
 
     const yScale = d3.scaleBand()
         .domain(data.map(d => d.task))
-        .range([0, innerHeight])
+        .range([0, height - margin.top - margin.bottom])
         .padding(0.2);
 
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -47,35 +49,24 @@ function renderAuditBars(data) {
     g.append("g").call(d3.axisLeft(yScale));
 
     g.append("g")
-        .attr("transform", `translate(0,${innerHeight})`)
+        .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
         .call(d3.axisBottom(xScale).ticks(5).tickFormat(d => formatXP(d, 2)));
 
     g.append("text")
         .attr("class", "x-axis-label")
-        .attr("y", innerHeight + 50)
-        .attr("x", innerWidth / 2)
+        .attr("y", height - margin.top - margin.bottom + 50)
+        .attr("x", (width - margin.left - margin.right) / 2)
         .style("text-anchor", "middle")
         .text("XP Points");
 
     g.append("text")
         .attr("class", "chart-title")
         .attr("y", -10)
-        .attr("x", innerWidth / 2)
+        .attr("x", (width - margin.left - margin.right) / 2)
         .style("text-anchor", "middle")
         .style("font-size", "20px")
         .text("Received Audits and XP Points");
 }
-
-// Renders the full audit chart, using extracted data for visualization.
-export async function renderAuditChart(transactions) {
-    const data = await extractAuditData(transactions);
-    if (data.length > 0) {
-        renderAuditBars(data);
-    } else {
-        console.error("No data found for audits.");
-    }
-}
-
 
 // Renders a comparative bar chart for audits done versus audits received.
 export function renderBarChart(auditDone, auditReceived) {
