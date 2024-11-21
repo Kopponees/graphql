@@ -1,24 +1,32 @@
 # **GraphQL**
 
-This project is designed for visualizing user related data. The data, Received Audits and Audits Done, is displayed using D3.js to create interactive bar charts. The project uses GraphQL for querying user data and JWT for secure user authentication.
+This project is a data visualization tool that leverages GraphQL for querying user-specific data and JWT for secure user authentication. Interactive D3.js-powered charts provide insights into user activity and XP progression.
 ---
 
 ## **Features**
-- Interactive bar charts for **Received Audits** and **Audits Done**.
-- Visualizes XP points from **Div-01**, **Piscine-go**, and **Piscine-js** projects.
-- **JWT-based user authentication** for secure login and session management.
-- **GraphQL API** integration for efficient data querying.
 
+- User Information
+- Displays detailed user information in a dedicated section.
+-  Data Visualizations
+- Interactive bar charts powered by D3.js:
+- Received Audits: Tracks XP points earned from audits received.
+- Audits Done: Highlights XP points gained from audits performed.
+- XP visualization for Div-01, Piscine-go, and Piscine-js projects.
+- Authentication & Security
+- Secure JWT-based authentication ensures safe login and session management.
+- User login requires credentials from 01.kood.tech.
+- GraphQL Integration
+- Efficient and flexible data querying using a GraphQL API.
+- Enables real-time updates and precise data fetching.
 ---
 
 ## **Hosting**
 
-- Page is hosted at: 
-- For login you need to type your 01.kood.tech email/username and a password.
+The project is hosted on GitHub Pages for easy accessibility.
+- [graphQL page](https://kopponees.github.io/graphql/)
 
 
 ## **Author**
 
 [Liis Eiland](https://01.kood.tech/git/leiland)
-
 
