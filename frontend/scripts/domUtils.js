@@ -32,9 +32,6 @@ export function setupLogout() {
             localStorage.removeItem("loggedIn");
             localStorage.removeItem("username");
             showNotification("It was nice to see you! Come back soon!");
-            setTimeout(() => {
-                window.location.replace("/");
-            }, 1000);
         });
     }
 }
