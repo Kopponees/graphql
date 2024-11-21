@@ -12,7 +12,6 @@
 
 body {
     background-color: rgb(1, 47, 1); /* Main background color */
-    cursor: url('/frontend/style/images/cursor.png'), auto; /* Custom cursor */
 
 }
 
@@ -57,7 +56,7 @@ body {
     background-color: #da049d; /* Button color */
     border: none;
     border-radius: 8px;
-    cursor: url('/frontend/style/images/pointer.png'), auto; /* Custom cursor */
+    cursor: pointer
 }
 
 #loginForm button:hover {
@@ -185,7 +184,7 @@ body {
     background-color: #da049d; /* Logout button background */
     border: none;
     border-radius: 8px;
-    cursor: url('/frontend/style/images/pointer.png'), auto; /* Custom cursor */
+    cursor: pointer
 }
 
 #logoutButton:hover {
@@ -239,7 +238,7 @@ body {
 .category-box:hover {
     background-color: #ccc; /* Hover background */
     box-shadow: inset 0px 4px 6px rgba(85, 85, 85, 0.4);
-    cursor: url('/frontend/style/images/pointer.png'), auto; /* Custom cursor */
+    cursor: pointer
 }
 
 @media (max-width: 768px) {
@@ -294,7 +293,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url('/frontend/style/images/pointer.png'), auto; /* Custom cursor */
+    cursor: pointer
 }
 
 .popup button:hover {
@@ -304,7 +303,7 @@ body {
 /* Miscellaneous */
 button {
     padding: 10px 15px;
-    cursor: url('/frontend/style/images/pointer.png'), auto; /* Custom cursor */
+    cursor: pointer
 }
 
 h3 {
