@@ -41,5 +41,5 @@ const server = http.createServer((req, res) => {
 
 // Start the server
 server.listen(3000, () => {
-    console.log('Server running at https://kopponees.github.io/graphql/');
+    console.log('Server running at https://kopponees.github.io/graphql/git ');
 });
