@@ -71,8 +71,8 @@ export function renderAuditBars(data) {
 // Renders a comparative bar chart for audits done versus audits received.
 export function renderBarChart(auditDone, auditReceived) {
     const data = [
-        { name: "Audits Done", value: auditDone },
-        { name: "Audits Received", value: auditReceived }
+        { name: "Done", value: auditDone },
+        { name: "Received", value: auditReceived }
     ];
 
     const margin = { top: 20, right: 30, bottom: 60, left: 60 };

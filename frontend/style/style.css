@@ -129,6 +129,7 @@ body {
     #barChartContainer {
         flex: 1 1 100%;
         margin-bottom: 20px;
+        width: 100%;
     }
 
     #mainContainer {
@@ -136,6 +137,9 @@ body {
         align-items: center;
     }
 }
+
+  
+
 
 /* Chart Customizations */
 .bar-value {
